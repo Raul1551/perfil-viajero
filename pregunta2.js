@@ -54,7 +54,7 @@ boton.addEventListener('click', function () {
     console.log("El elemento que más número de veces se repite son: " + maximo + " veces.");
     console.log("El elemento que más se repite es: " + masRepetido(arrayOrder) + " veces.");
 
-    window.location.href = "http://127.0.0.1:5500/index-pregunta3.html";
+    window.location.href = "/index-pregunta3.html";
     
 });
 

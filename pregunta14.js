@@ -61,7 +61,7 @@ function catchData(array) {
 
     saveAs(blob, conv_json);*/
 
-    window.location.href = "http://127.0.0.1:5500/index-perfilViajero.html";
+    window.location.href = "/index-perfilViajero.html";
 
 };
 

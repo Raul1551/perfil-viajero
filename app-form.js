@@ -30,7 +30,7 @@ function catching() {
                         alert('Debes marcar la casilla de consentimiento');
                     } else {
                         console.log(json);
-                        window.location.href = "http://127.0.0.1:5500/index-pregunta1.html";
+                        window.location.href = "/index-pregunta1.html";
                     }
 
                 }
