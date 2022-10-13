@@ -171,13 +171,10 @@ input[type=checkbox]:checked + label:before{
         text-align: center;
         cursor: pointer;
     }
-    img{
-        display: none;
-    }
+    
     h3{
         position: relative;
         left: 15px;
-        bottom: 10px;
     }
     label:before{
         display: flex;
