@@ -166,22 +166,19 @@ input[type=checkbox]:checked + label:before{
         justify-content: center;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 10px;
+        grid-gap: 5px;
     }
     .col{
         background-color: #ECD66C;
         border-radius: 5px;
         padding: 10px;
+        margin: 0;
         text-align: center;
         cursor: pointer;
     }
-    img{
-        display: none;
-    }
+    
     h3{
         position: relative;
-        left: 15px;
-        bottom: 10px;
     }
     label:before{
         display: flex;

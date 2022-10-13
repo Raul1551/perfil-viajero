@@ -177,19 +177,15 @@ input[type=checkbox]:checked + label:before{
         text-align: center;
         cursor: pointer;
     }
-    img{
-        display: none;
-    }
+    
     h3{
         position: relative;
-        left: 5px;
-        bottom: 10px;
     }
     label:before{
         display: flex;
         position: relative;
         top: 12px;
-        left: -65px;
+        left: 2px;
         content: '';
         background: white;
         border: 2px solid #b46f0f;

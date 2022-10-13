@@ -151,25 +151,6 @@ input[type=checkbox]:checked + label:before{
         justify-content: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: px;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {
-    body{
-        font-size: 14px;
-    };
-
-}
-
-/* Large devices (desktops, 992px and up) */ 
-@media (max-width: 992px) {
-    .container-columns{
-        display: flex;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
     }
 }
@@ -185,22 +166,19 @@ input[type=checkbox]:checked + label:before{
         justify-content: center;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 10px;
+        grid-gap: 5px;
     }
     .col{
         background-color: #ECD66C;
         border-radius: 5px;
         padding: 10px;
+        margin: 0;
         text-align: center;
         cursor: pointer;
     }
-    img{
-        display: none;
-    }
+    
     h3{
         position: relative;
-        left: 15px;
-        bottom: 10px;
     }
     label:before{
         display: flex;
