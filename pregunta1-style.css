@@ -149,9 +149,6 @@ input[type=checkbox]:checked+label:before {
     body {
         font-size: 14px;
     }
-
-    ;
-
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -190,7 +187,6 @@ input[type=checkbox]:checked+label:before {
 
     h3 {
         position: relative;
-        left: 15px;
     }
 
     label:before {
