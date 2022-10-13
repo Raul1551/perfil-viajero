@@ -161,11 +161,8 @@ input[type=checkbox]:checked+label:before {
         grid-gap: 10px;
     }
 }
-
-/* Medium devices (tablets, 768px and up) */
-/*@media (max-width: 768px) {
     
-}*/
+
 /* Small devices (landscape phones, 576px and up ) */
 @media (max-width: 576px) {
     .container-columns {
