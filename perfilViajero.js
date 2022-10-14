@@ -63,6 +63,9 @@ var resultado14 = JSON.parse(sessionStorage.getItem("pregunta14"));
 function elQueMasAparece() {
 
     var valorDesdeLS = document.getElementById('valorDesdeLS');
+
+    const imgAstroturismo = document.createElement('img');
+    imgAstroturismo.src = 'img/astroturismo.jpg'
     var arrayTotal = [...resultado4, ...resultado7, ...resultado8, ...resultado10, ...resultado11, ...resultado12, ...resultado13, ...resultado14];
     var arrayOrder = arrayTotal.sort();
     console.log(arrayOrder);
@@ -91,7 +94,12 @@ function elQueMasAparece() {
         }
     }
 
-    valorDesdeLS.innerHTML =  mas_frecuente;
+    if(mas_frecuente === 'astroturismo'){
+        valorDesdeLS.innerHTML =  mas_frecuente;
+        document.querySelector('.container').appendChild(imgAstroturismo)
+    }else{
+        valorDesdeLS.innerHTML = mas_frecuente;
+    }
 
     /*return [mas_frecuente, valor_mayor];*/
 };
@@ -101,5 +109,6 @@ var button = document.getElementById('button-final');
 button.addEventListener('click', () => {
     elQueMasAparece();
 });
+
 
 
