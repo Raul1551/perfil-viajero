@@ -91,7 +91,7 @@ function elQueMasAparece() {
         }
     }
 
-    valorDesdeLS.innerHTML = "¡" + mas_frecuente + "!";
+    valorDesdeLS.innerHTML =  mas_frecuente;
 
     /*return [mas_frecuente, valor_mayor];*/
 };
