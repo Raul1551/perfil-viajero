@@ -87,9 +87,9 @@ input[type=radio]:checked + label:before{
 }
 
 /*Más adelante, aplicar evento onclick para cambiar el estilo a botón activo*/
-.boton-siguiente{
-    background-color: #ECD66C;
-    color: white;
+.boton-siguiente {
+    background-color: #000;
+    color: #ECD66C;
     font-size: 24px;
     /*cursor: not-allowed;*/
     cursor: pointer;
@@ -104,9 +104,13 @@ input[type=radio]:checked + label:before{
     vertical-align: middle;
     margin-top: 15px;
 }
-.boton-anterior{
-    background-color: #ECD66C;
-    color: white;
+.boton-siguiente:active{
+    color: blue;
+}
+
+.boton-anterior {
+    background-color: #000;
+    color: #ECD66C;
     font-size: 24px;
     /*cursor: not-allowed;*/
     cursor: pointer;
@@ -120,6 +124,9 @@ input[type=radio]:checked + label:before{
     display: inline-block;
     vertical-align: middle;
     margin-top: 15px;
+}
+.boton-anterior:active{
+    color: blue;
 }
 .container-bar {
     background-color: rgb(61, 61, 61);
@@ -215,39 +222,5 @@ input[type=radio]:checked + label:before{
         text-shadow: 2px -1px 2px #9b7a4d;
         vertical-align: middle;
         
-    }
-    .boton-siguiente{
-        background-color: #ECD66C;
-        color: white;
-        font-size: 24px;
-        /*cursor: not-allowed;*/
-        cursor: pointer;
-        border-width: 0px;
-        /*opacity: 0.4;*/
-        border-radius: 5px;
-        font-weight: 400;
-        padding: 10px 20px;
-        text-decoration: none;
-        margin-bottom: 50px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: 15px;
-    }
-    .boton-anterior{
-        background-color: #ECD66C;
-        color: white;
-        font-size: 24px;
-        /*cursor: not-allowed;*/
-        cursor: pointer;
-        border-width: 0px;
-        /*opacity: 0.4;*/
-        border-radius: 5px;
-        font-weight: 400;
-        padding: 10px 20px;
-        text-decoration: none;
-        margin-bottom: 50px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: 15px;
     }
 }

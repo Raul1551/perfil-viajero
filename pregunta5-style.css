@@ -87,9 +87,9 @@ input[type=checkbox]:checked + label:before{
 }
 
 /*Más adelante, aplicar evento onclick para cambiar el estilo a botón activo*/
-.boton-siguiente{
-    background-color: #ECD66C;
-    color: white;
+.boton-siguiente {
+    background-color: #000;
+    color: #ECD66C;
     font-size: 24px;
     /*cursor: not-allowed;*/
     cursor: pointer;
@@ -104,9 +104,13 @@ input[type=checkbox]:checked + label:before{
     vertical-align: middle;
     margin-top: 15px;
 }
-.boton-anterior{
-    background-color: #ECD66C;
-    color: white;
+.boton-siguiente:active{
+    color: blue;
+}
+
+.boton-anterior {
+    background-color: #000;
+    color: #ECD66C;
     font-size: 24px;
     /*cursor: not-allowed;*/
     cursor: pointer;
@@ -120,6 +124,9 @@ input[type=checkbox]:checked + label:before{
     display: inline-block;
     vertical-align: middle;
     margin-top: 15px;
+}
+.boton-anterior:active{
+    color: blue;
 }
 .container-bar {
     background-color: rgb(61, 61, 61);
@@ -143,4 +150,77 @@ input[type=checkbox]:checked + label:before{
 
 .html {
     width: 28%;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .container-columns {
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+/*@media (max-width: 768px) {
+    
+}*/
+/* Small devices (landscape phones, 576px and up ) */
+@media (max-width: 576px) {
+    html, body {
+        width: 100%!important;
+             overflow-x:hidden;
+     }
+
+    .container-columns {
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+
+    .col {
+        background-color: #ECD66C;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       padding-right: 35px;
+    }
+
+    label:before {
+        display: flex;
+        position: relative;
+        top: 12px;
+        left: 2px;
+        content: '';
+        background: white;
+        border: 2px solid #b46f0f;
+        border-radius: 5px;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 300px;
+        text-align: center;
+        text-shadow: 2px -1px 2px #9b7a4d;
+        vertical-align: middle;
+
+    }
 }
