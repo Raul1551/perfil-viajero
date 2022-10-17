@@ -75,6 +75,16 @@ function elQueMasAparece() {
     imgWellness.src = 'img/wellness.jpg';
     imgOutdoors.src = 'img/aventura.jpg';
 
+    const linkAstro = document.createElement('a');
+    const textAstro = document.createTextNode('Accede al siguiente enlace para obtener más información');
+    const linkGastro = document.createElement('a');
+    const linkHisto = document.createElement('a');
+    const linkWell = document.createElement('a');
+    const linkOut = document.createElement('a');
+
+    linkAstro.setAttribute("href", "https://udestinations.es/su-perfil-viajero-es-astroturismo")
+    linkAstro.appendChild(textAstro);
+
     var arrayTotal = [...resultado4, ...resultado7, ...resultado8, ...resultado10, ...resultado11, ...resultado12, ...resultado13, ...resultado14];
     var arrayOrder = arrayTotal.sort();
     console.log(arrayOrder);
@@ -106,6 +116,7 @@ function elQueMasAparece() {
     if(mas_frecuente === 'astroturismo'){
         valorDesdeLS.innerHTML =  mas_frecuente;
         document.querySelector('.container').appendChild(imgAstroturismo)
+        document.body.appendChild(textAstro);
     }else if (mas_frecuente === 'gastronomico'){
         valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgGastronomico)
