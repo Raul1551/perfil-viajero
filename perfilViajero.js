@@ -62,7 +62,7 @@ var resultado14 = JSON.parse(sessionStorage.getItem("pregunta14"));
 
 function elQueMasAparece() {
 
-    var valorDesdeLS = document.getElementById('valorDesdeLS');
+    const valorDesdeLS = document.getElementById('valorDesdeLS');
 
     const imgAstroturismo = document.createElement('img');
     const imgGastronomico = document.createElement('img');
@@ -75,15 +75,21 @@ function elQueMasAparece() {
     imgWellness.src = 'img/wellness.jpg';
     imgOutdoors.src = 'img/aventura.jpg';
 
-    const linkAstro = document.createElement('a');
-    const textAstro = document.createTextNode('Accede al siguiente enlace para obtener más información');
-    const linkGastro = document.createElement('a');
-    const linkHisto = document.createElement('a');
-    const linkWell = document.createElement('a');
-    const linkOut = document.createElement('a');
+    const linkAstro = "https://udestinations.es/su-perfil-viajero-es-astroturismo";
+    const linkGastro = "https://udestinations.es/su-perfil-viajero-es-gastronomico";
+    const linkHisto = "https://udestinations.es/su-perfil-viajero-es-historico-cultural";
+    const linkOut = "https://udestinations.es/tu-perfil-viajero-es-outdoors-aventura";
+    const linkWell = "https://udestinations.es/su-perfil-viajero-es-wellnex-relax";
 
-    linkAstro.setAttribute("href", "https://udestinations.es/su-perfil-viajero-es-astroturismo")
-    linkAstro.appendChild(textAstro);
+    const elementAstro = document.createElement('a');
+    const elementGastro = document.createElement('a');
+    const elementHisto = document.createElement('a');
+    const elementWell = document.createElement('a');
+    const elementOut = document.createElement('a');
+
+   
+    
+
 
     var arrayTotal = [...resultado4, ...resultado7, ...resultado8, ...resultado10, ...resultado11, ...resultado12, ...resultado13, ...resultado14];
     var arrayOrder = arrayTotal.sort();
@@ -113,26 +119,46 @@ function elQueMasAparece() {
         }
     }
 
+    elementAstro.setAttribute("href", linkAstro);
+    elementAstro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+
+    elementGastro.setAttribute("href", linkGastro);
+    elementGastro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+
+    elementHisto.setAttribute("href", linkHisto);
+    elementHisto.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+
+    elementWell.setAttribute("href", linkWell);
+    elementWell.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+
+    elementOut.setAttribute("href", linkOut);
+    elementOut.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+
     if(mas_frecuente === 'astroturismo'){
         valorDesdeLS.innerHTML =  mas_frecuente;
         document.querySelector('.container').appendChild(imgAstroturismo)
-        document.body.appendChild(textAstro);
+        document.body.appendChild(elementAstro)
     }else if (mas_frecuente === 'gastronomico'){
         valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgGastronomico)
+        document.body.appendChild(elementGastro)
     }else if(mas_frecuente === 'historico'){
         valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgHistorico)
+        document.body.appendChild(elementHisto)
     }else if(mas_frecuente === 'wellness'){
         valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgWellness)
+        document.body.appendChild(elementWell)
     }else if(mas_frecuente === 'outdoors'){
         valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgOutdoors)
+        document.body.appendChild(elementOut)
     }
 
     /*return [mas_frecuente, valor_mayor];*/
 };
+
 
 
 var button = document.getElementById('button-final');

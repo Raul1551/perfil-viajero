@@ -75,6 +75,20 @@ img{
    
 }
 
+a{
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #ECD66C;
+    padding: 15px 0;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #4cb1a0;
+}
+
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
     
@@ -94,6 +108,10 @@ img{
         max-height: 600px;
         margin-top: 30px;
        
+    }
+
+    a{
+        font-size: 25px;
     }
     
 }
@@ -120,5 +138,14 @@ img{
 
     h1{
         font-size: 35px;
+    }
+
+    a{
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    a:active{
+        color: #4cb1a0;
     }
 }
