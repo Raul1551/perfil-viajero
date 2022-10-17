@@ -108,7 +108,7 @@ function elQueMasAparece() {
         document.querySelector('.container').appendChild(imgAstroturismo)
     }else if (mas_frecuente === 'gastronomico'){
         valorDesdeLS.innerHTML = mas_frecuente;
-        document.querySelector('.container').appChild(imgGastronomico)
+        document.querySelector('.container').appendChild(imgGastronomico)
     }else if(mas_frecuente === 'historico'){
         valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgHistorico)
