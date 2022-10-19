@@ -1,56 +1,3 @@
-/*function elQueMasAparece() {
-
-    var array = ["astroturismo", "gastronomico", "astroturismo", "historico", "astroturismo", "astroturismo", "astroturismo"];
-    var array1 = ["historico", "wellnes", "astroturismo", "gastronomico", "outdoors", "historico"];
-    var array2 = ["outdoors", "astroturismo", "outdoors", "outdoors", "gastronomico", "outdoors"];
-    var array3 = ["historico", "historico", "historico", "outdoors", "outdoors", "outdoors", "outdoors", "outdoors"];
-
-
-    console.log(array, array1, array2, array3);
-
-    var arrayTotal = [...array1, ...array, ...array2, ...array3];
-
-
-    var arrayOrder = arrayTotal.sort();
-    console.log(arrayOrder);
-
-    let mapeo = {};
-    let mas_frecuente = "";
-    let valor_mayor = 0;
-
-    if (typeof arrayOrder === "string") {
-        arrayOrder = arrayOrder.split(" ");
-    }
-
-    for (let elemento of arrayOrder) {
-        if (mapeo[elemento]) {
-            mapeo[elemento]++;
-        } else {
-            mapeo[elemento] = 1;
-        }
-
-    };
-
-    for (let elemento in mapeo) {
-        if (mapeo[elemento] > valor_mayor) {
-            valor_mayor = mapeo[elemento];
-            mas_frecuente = elemento;
-        }
-    }
-
-    
-    return {
-        "mas_frecuente": mas_frecuente,
-        "valor_mayor": valor_mayor
-    };
-
-    
-    
-};
-
-console.log(elQueMasAparece());
-*/
-
 var resultado4 = JSON.parse(sessionStorage.getItem("pregunta4"));
 var resultado7 = JSON.parse(sessionStorage.getItem("pregunta7"));
 var resultado8 = JSON.parse(sessionStorage.getItem("pregunta8"));
@@ -62,9 +9,9 @@ var resultado14 = JSON.parse(sessionStorage.getItem("pregunta14"));
 
 function elQueMasAparece() {
 
-    const valorDesdeLS = document.getElementById('valorDesdeLS');
+    /*const valorDesdeLS = document.getElementById('valorDesdeLS');*/
 
-    const imgAstroturismo = document.createElement('img');
+    /*const imgAstroturismo = document.createElement('img');
     const imgGastronomico = document.createElement('img');
     const imgHistorico = document.createElement('img');
     const imgWellness = document.createElement('img');
@@ -73,7 +20,8 @@ function elQueMasAparece() {
     imgAstroturismo.src = 'img/astroturismo.jpg';
     imgHistorico.src = 'img/historico.jpg';
     imgWellness.src = 'img/wellness.jpg';
-    imgOutdoors.src = 'img/aventura.jpg';
+    imgOutdoors.src = 'img/aventura.jpg';*/
+
 
     const linkAstro = "https://udestinations.es/su-perfil-viajero-es-astroturismo";
     const linkGastro = "https://udestinations.es/su-perfil-viajero-es-gastronomico";
@@ -81,11 +29,11 @@ function elQueMasAparece() {
     const linkOut = "https://udestinations.es/tu-perfil-viajero-es-outdoors-aventura";
     const linkWell = "https://udestinations.es/su-perfil-viajero-es-wellnex-relax";
 
-    const elementAstro = document.createElement('a');
+    /*const elementAstro = document.createElement('a');
     const elementGastro = document.createElement('a');
     const elementHisto = document.createElement('a');
     const elementWell = document.createElement('a');
-    const elementOut = document.createElement('a');
+    const elementOut = document.createElement('a');*/
 
    
     
@@ -119,10 +67,10 @@ function elQueMasAparece() {
         }
     }
 
-    elementAstro.setAttribute("href", linkAstro);
-    elementAstro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+    /*elementAstro.setAttribute("href", linkAstro);
+    /*elementAstro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;*/
 
-    elementGastro.setAttribute("href", linkGastro);
+    /*elementGastro.setAttribute("href", linkGastro);
     elementGastro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
 
     elementHisto.setAttribute("href", linkHisto);
@@ -132,28 +80,33 @@ function elQueMasAparece() {
     elementWell.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
 
     elementOut.setAttribute("href", linkOut);
-    elementOut.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+    elementOut.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;*/
 
     if(mas_frecuente === 'astroturismo'){
-        valorDesdeLS.innerHTML =  mas_frecuente;
+        window.location.href = linkAstro;
+        /*valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgAstroturismo)
-        document.body.appendChild(elementAstro)
+        document.body.appendChild(elementAstro)*/
     }else if (mas_frecuente === 'gastronomico'){
-        valorDesdeLS.innerHTML = mas_frecuente;
+        window.location.href = linkGastro;
+        /*valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgGastronomico)
-        document.body.appendChild(elementGastro)
+        document.body.appendChild(elementGastro)*/
     }else if(mas_frecuente === 'historico'){
-        valorDesdeLS.innerHTML = mas_frecuente;
+        window.location.href = linkHisto;
+        /*valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgHistorico)
-        document.body.appendChild(elementHisto)
+        document.body.appendChild(elementHisto)*/
     }else if(mas_frecuente === 'wellness'){
-        valorDesdeLS.innerHTML = mas_frecuente;
+        window.location.href = linkWell;
+        /*valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgWellness)
-        document.body.appendChild(elementWell)
+        document.body.appendChild(elementWell)*/
     }else if(mas_frecuente === 'outdoors'){
-        valorDesdeLS.innerHTML = mas_frecuente;
+        window.location.href = linkOut;
+        /*valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgOutdoors)
-        document.body.appendChild(elementOut)
+        document.body.appendChild(elementOut)*/
     }
 
     /*return [mas_frecuente, valor_mayor];*/

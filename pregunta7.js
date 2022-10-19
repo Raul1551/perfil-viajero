@@ -65,7 +65,7 @@ function catchData(array) {
 
 };
 
-    checkbox1 = document.getElementById('check17')
+checkbox1 = document.getElementById('check17')
 checkbox1.checked = eval(window.sessionStorage.getItem(checkbox1.id))
 
 checkbox1.addEventListener('change', function () {
