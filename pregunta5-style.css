@@ -177,33 +177,34 @@ input[type=checkbox]:checked + label:before{
 /* Small devices (landscape phones, 576px and up ) */
 @media (max-width: 576px) {
     html, body {
-        width: 100%!important;
-             overflow-x:hidden;
+         width: 100%!important;
+              overflow-x:hidden;
+      }
+     .container-columns{
+         display: flex;
+         justify-content: center;
+         display: grid;
+         grid-template-columns: repeat(1, 1fr);
+         grid-gap: 10px;
      }
-
-    .container-columns {
-        display: flex;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 10px;
-    }
-
-    .col {
-        background-color: #ECD66C;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 5;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    h3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       padding-right: 35px;
-    }
+     .col{
+         display: grid;
+         align-items: center;
+         background-color: #ECD66C;
+         border-radius: 5px;
+         padding: 10px;
+         margin: 5px 0;
+         cursor: pointer;
+     }
+     img{
+         display: none;
+     }
+     h3{
+         text-align: left;
+         padding: 0px 35px 0px 5px;
+         margin-right: 8px;
+         text-align: justify;
+     }
 
     label:before {
         display: flex;
