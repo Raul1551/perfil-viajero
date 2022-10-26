@@ -9,18 +9,19 @@ var resultado14 = JSON.parse(sessionStorage.getItem("pregunta14"));
 
 function elQueMasAparece() {
 
-    /*const valorDesdeLS = document.getElementById('valorDesdeLS');*/
+    const valorDesdeLS = document.getElementById('valorDesdeLS');
 
-    /*const imgAstroturismo = document.createElement('img');
+    const imgAstroturismo = document.createElement('img');
+    imgAstroturismo.src = 'https://res.cloudinary.com/udestinations/image/upload/v1666176876/quiz/peril-viajero/astroturismo_z8srga.jpg';
     const imgGastronomico = document.createElement('img');
+    imgGastronomico.src = 'https://res.cloudinary.com/udestinations/image/upload/v1666176875/quiz/peril-viajero/gastronomico_wtbb2r.jpg';
     const imgHistorico = document.createElement('img');
+    imgHistorico.src = 'https://res.cloudinary.com/udestinations/image/upload/v1666176875/quiz/peril-viajero/historico_wwnpob.jpg';
     const imgWellness = document.createElement('img');
+    imgWellness.src = 'https://res.cloudinary.com/udestinations/image/upload/v1666176876/quiz/peril-viajero/wellness_mzds4f.jpg';
     const imgOutdoors = document.createElement('img');
-    imgGastronomico.src = 'img/gastronomico.jpg';
-    imgAstroturismo.src = 'img/astroturismo.jpg';
-    imgHistorico.src = 'img/historico.jpg';
-    imgWellness.src = 'img/wellness.jpg';
-    imgOutdoors.src = 'img/aventura.jpg';*/
+    imgOutdoors.src = 'https://res.cloudinary.com/udestinations/image/upload/v1666176876/quiz/peril-viajero/aventura_mbmpku.jpg';
+    
 
 
     const linkAstro = "https://udestinations.es/su-perfil-viajero-es-astroturismo";
@@ -29,11 +30,11 @@ function elQueMasAparece() {
     const linkOut = "https://udestinations.es/tu-perfil-viajero-es-outdoors-aventura";
     const linkWell = "https://udestinations.es/su-perfil-viajero-es-wellnex-relax";
 
-    /*const elementAstro = document.createElement('a');
+    const elementAstro = document.createElement('a');
     const elementGastro = document.createElement('a');
     const elementHisto = document.createElement('a');
     const elementWell = document.createElement('a');
-    const elementOut = document.createElement('a');*/
+    const elementOut = document.createElement('a');
 
    
     
@@ -67,46 +68,46 @@ function elQueMasAparece() {
         }
     }
 
-    /*elementAstro.setAttribute("href", linkAstro);
-    /*elementAstro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;*/
+    elementAstro.setAttribute("href", linkAstro);
+    elementAstro.innerHTML = "« Descubre más detalles » ";
 
-    /*elementGastro.setAttribute("href", linkGastro);
-    elementGastro.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+    elementGastro.setAttribute("href", linkGastro);
+    elementGastro.innerHTML = "« Descubre más detalles » ";
 
     elementHisto.setAttribute("href", linkHisto);
-    elementHisto.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+    elementHisto.innerHTML = "« Descubre más detalles » ";
 
     elementWell.setAttribute("href", linkWell);
-    elementWell.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;
+    elementWell.innerHTML = "« Descubre más detalles » ";
 
     elementOut.setAttribute("href", linkOut);
-    elementOut.innerHTML = "Acceder al siguiente enlace para más información sobre turismo " + mas_frecuente;*/
+    elementOut.innerHTML = "« Descubre más detalles » ";
 
     if(mas_frecuente === 'astroturismo'){
-        window.location.href = linkAstro;
-        /*valorDesdeLS.innerHTML = mas_frecuente;
+        /*window.location.href = linkAstro;*/
+        valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgAstroturismo)
-        document.body.appendChild(elementAstro)*/
+        document.body.appendChild(elementAstro)
     }else if (mas_frecuente === 'gastronomico'){
-        window.location.href = linkGastro;
-        /*valorDesdeLS.innerHTML = mas_frecuente;
+        /*window.location.href = linkGastro;*/
+        valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgGastronomico)
-        document.body.appendChild(elementGastro)*/
+        document.body.appendChild(elementGastro)
     }else if(mas_frecuente === 'historico'){
-        window.location.href = linkHisto;
-        /*valorDesdeLS.innerHTML = mas_frecuente;
+        /*window.location.href = linkHisto;*/
+        valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgHistorico)
-        document.body.appendChild(elementHisto)*/
+        document.body.appendChild(elementHisto)
     }else if(mas_frecuente === 'wellness'){
-        window.location.href = linkWell;
-        /*valorDesdeLS.innerHTML = mas_frecuente;
+        /*window.location.href = linkWell;*/
+        valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgWellness)
-        document.body.appendChild(elementWell)*/
+        document.body.appendChild(elementWell)
     }else if(mas_frecuente === 'outdoors'){
-        window.location.href = linkOut;
-        /*valorDesdeLS.innerHTML = mas_frecuente;
+        /*window.location.href = linkOut;*/
+        valorDesdeLS.innerHTML = mas_frecuente;
         document.querySelector('.container').appendChild(imgOutdoors)
-        document.body.appendChild(elementOut)*/
+        document.body.appendChild(elementOut)
     }
 
     /*return [mas_frecuente, valor_mayor];*/
