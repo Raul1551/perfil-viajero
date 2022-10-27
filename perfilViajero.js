@@ -113,7 +113,10 @@ function elQueMasAparece() {
     /*return [mas_frecuente, valor_mayor];*/
 };
 
-
+function ocultar(){
+    var elemento = document.getElementById('button-final');
+    elemento.style.display = 'none';
+}
 
 var button = document.getElementById('button-final');
 button.addEventListener('click', () => {
